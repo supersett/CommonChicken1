@@ -1197,7 +1197,7 @@ ol {
 
 .filter__radius .price-input {
 	position: absolute;
-	left: 55px;
+	left: 38px;
 	top: 0;
 }
 
@@ -1252,9 +1252,21 @@ ol {
 	top: 0;
 }
 
+.filter__price .shiptime-input {
+	position: absolute;
+	left: 62px;
+	top: 0;
+}
+
+.filter__price .endtime-input {
+	position: absolute;
+	left: 62px;
+	top: 0;
+}
+
 .filter__price .price-input:after {
 	position: absolute;
-	right: 44px;
+	right: 38px;
 	top: 12px;
 	height: 2px;
 	width: 4px;

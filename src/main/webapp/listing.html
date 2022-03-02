@@ -24,6 +24,22 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+	<style>
+	    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+	    .wrap * {padding: 0;margin: 0;}
+	    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+	    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+	    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+	    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+	    .info .close:hover {cursor: pointer;}
+	    .info .body {position: relative;overflow: hidden;}
+	    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+	    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+	    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+	    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+	    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+	    .info .link {color: #5085BB;}
+	</style>
 </head>
 
 <body class="ov-hid">
@@ -77,20 +93,21 @@
         <div class="filter__title">
             <h5><i class="fa fa-filter"></i> Filter</h5>
         </div>
-        <div class="filter__search">
+        <br>
+<!--         <div class="filter__search">
             <input type="text">
         </div>
         <div class="filter__select">
             <select>
                 <option value="">All Categories</option>
             </select>
-        </div>
+        </div> -->
         <div class="filter__location">
-            <input type="text" placeholder="Location">
+            <input type="text" placeholder="위치">
             <i class="fa fa-map-marker"></i>
         </div>
         <div class="filter__radius">
-            <p>Radius:</p>
+            <p>거리 :</p>
             <div class="price-range-wrap">
                 <div
                     class="price-range-radius ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
@@ -105,7 +122,7 @@
             </div>
         </div>
         <div class="filter__price">
-            <p>Price:</p>
+            <p>별점 :</p>
             <div class="price-range-wrap">
                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                     <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
@@ -113,13 +130,47 @@
                 </div>
                 <div class="range-slider">
                     <div class="price-input">
-                        <input type="text" id="minamount">
-                        <input type="text" id="maxamount" value="$80">
+                        <input type="text" id="minamount" value="3명">
+                        <input type="text" id="maxamount" value="5개">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="filter__tags">
+        	 <div>
+           		 <p>커먼 마감시간 :</p>
+				<select name='endtime' onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+				  <option value='1'>13시</option>
+				  <option value='2'>14시</option>
+				  <option value='3'>15시</option>
+				  <option value='4'>16시</option>
+				  <option value='5'>17시</option>
+				  <option value='6'>18시</option>
+				  <option value='7'>19시</option>
+				  <option value='8'>20시</option>
+				  <option value='9'>22시</option>
+				  <option value='10'>23시</option>
+				  <option value='11'>24시</option>
+				</select>
+            </div>
+            <br><br><br>
+            
+        	 <div>
+           		 <p>배달시간 :</p>           		 
+				<select name='shiptime'>
+				  <option value='1'>13시</option>
+				  <option value='2'>14시</option>
+				  <option value='3'>15시</option>
+				  <option value='4'>16시</option>
+				  <option value='5'>17시</option>
+				  <option value='6'>18시</option>
+				  <option value='7'>19시</option>
+				  <option value='8'>20시</option>
+				  <option value='9'>22시</option>
+				  <option value='10'>23시</option>
+				  <option value='11'>24시</option>
+				</select>
+            </div>
+<!--         <div class="filter__tags">
             <h6>Tag</h6>
             <label for="coupon">
                 Coupons
@@ -156,10 +207,12 @@
                 <input type="checkbox" id="hd">
                 <span class="checkmark"></span>
             </label>
-        </div>
+        </div> -->
+        <br><br>
+        
         <div class="filter__btns">
-            <button type="submit">Filter Results</button>
-            <button type="submit" class="filter__reset">Reset All</button>
+            <button type="submit">필터 검색</button>
+            <button type="submit" class="filter__reset">초기화</button>
         </div>
     </div>
     <!-- Filter End -->
@@ -171,7 +224,11 @@
                 <h5>Restaurants</h5>
                 <span>18 Results Found</span>
             </div>
-            <div class="listing__text__top__right">Nearby <i class="fa fa-sort-amount-asc"></i></div>
+            <div class="listing__text__top__right">
+	            <button style="border:none; background-color: white;"><b>별점순★</b>️</button>&nbsp;&nbsp;
+	            <button style="border:none; background-color: white;"><b>후기순✎</b></button>
+	            <i class="fa fa-sort-amount-asc"></i>
+            </div>
         </div>
         <div class="listing__list">
             <div class="listing__item">
@@ -402,8 +459,80 @@
 
     <!-- Map Begin -->
     <div class="listing__map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.43556031643!2d-118.69192431097179!3d34.020730495817475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1586670019340!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<div id="map" style="width:100%;height:100%;"></div>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3f2400bbaac1b16c5e6592a750160c2d"></script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+		<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+			    mapOption = { 
+			        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+			        level: 3 // 지도의 확대 레벨
+			    };
+			
+			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+			
+			// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+			var mapTypeControl = new kakao.maps.MapTypeControl();
+			
+			// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+			// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+			map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+			
+			// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+			var zoomControl = new kakao.maps.ZoomControl();
+			map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+			
+			// 지도에 마커를 표시합니다 
+			var marker = new kakao.maps.Marker({
+			    map: map, 
+			    position: new kakao.maps.LatLng(33.450701, 126.570667)
+			});
+
+			// 커스텀 오버레이에 표시할 컨텐츠 입니다
+			// 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
+			// 별도의 이벤트 메소드를 제공하지 않습니다 
+			var content = '<div class="wrap">' + 
+			            '    <div class="info">' + 
+			            '        <div class="title">' + 
+			            '            카카오 스페이스닷원' + 
+			            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
+			            '        </div>' + 
+			            '        <div class="body">' + 
+			            '            <div class="img">' +
+			            '                <img src="https://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
+			            '           </div>' + 
+			            '            <div class="desc">' + 
+			            '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' + 
+			            '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' + 
+			            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' + 
+			            '            </div>' + 
+			            '        </div>' + 
+			            '    </div>' +    
+			            '</div>';
+
+			// 마커 위에 커스텀오버레이를 표시합니다
+			// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+			var overlay = new kakao.maps.CustomOverlay({
+			    content: content,
+			    map: map,
+			    position: marker.getPosition()       
+			});
+
+			// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+			kakao.maps.event.addListener(marker, 'click', function() {
+			    overlay.setMap(map);
+			});
+
+			// 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
+			function closeOverlay() {
+			    overlay.setMap(null);     
+			}
+			
+		</script>
+    
+       <!--  <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.43556031643!2d-118.69192431097179!3d34.020730495817475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1586670019340!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
     </div>
     <!-- Map End -->
 
