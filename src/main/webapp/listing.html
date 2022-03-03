@@ -39,6 +39,10 @@
 	    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
 	    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
 	    .info .link {color: #5085BB;}
+	    .list {
+			  max-height: 100px;
+			  overflow-y: scroll !important;
+			}
 	</style>
 </head>
 
@@ -126,7 +130,7 @@
             <div class="price-range-wrap">
                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
                     <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
-                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                    <span tabindex="4" class="ui-slider-handle ui-corner-all ui-state-default"></span>
                 </div>
                 <div class="range-slider">
                     <div class="price-input">
@@ -137,8 +141,8 @@
             </div>
         </div>
         	 <div>
-           		 <p>커먼 마감시간 :</p>
-				<select name='endtime' onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+           		 <p style="display: inline;">커먼 마감시간 :</p>
+				<select name='endtime'>
 				  <option value='1'>13시</option>
 				  <option value='2'>14시</option>
 				  <option value='3'>15시</option>
@@ -148,14 +152,14 @@
 				  <option value='7'>19시</option>
 				  <option value='8'>20시</option>
 				  <option value='9'>22시</option>
-				  <option value='10'>23시</option>
-				  <option value='11'>24시</option>
+				  <option value='10'>22시</option>
+				  <option value='11'>23시</option>
+				  <option value='12'>24시</option>
 				</select>
             </div>
-            <br><br><br>
-            
+            <br>            
         	 <div>
-           		 <p>배달시간 :</p>           		 
+           		 <p style="display: inline;">배달시간 :</p>           		 
 				<select name='shiptime'>
 				  <option value='1'>13시</option>
 				  <option value='2'>14시</option>
@@ -166,9 +170,19 @@
 				  <option value='7'>19시</option>
 				  <option value='8'>20시</option>
 				  <option value='9'>22시</option>
-				  <option value='10'>23시</option>
-				  <option value='11'>24시</option>
+				  <option value='10'>22시</option>
+				  <option value='11'>23시</option>
+				  <option value='12'>24시</option>
 				</select>
+            </div>
+            <br>
+            <div>
+            	<p>별점</p>
+            	<label><input type="checkbox" name="five" value="5">⭐️⭐️⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="four" value="4">⭐️⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="three" value="3">⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="two" value="2">⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="one" value="1">️⭐️</label>
             </div>
 <!--         <div class="filter__tags">
             <h6>Tag</h6>
