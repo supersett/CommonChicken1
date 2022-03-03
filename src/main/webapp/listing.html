@@ -106,10 +106,10 @@
                 <option value="">All Categories</option>
             </select>
         </div> -->
-        <div class="filter__location">
+<!--         <div class="filter__location">
             <input type="text" placeholder="위치">
             <i class="fa fa-map-marker"></i>
-        </div>
+        </div> -->
         <div class="filter__radius">
             <p>거리 :</p>
             <div class="price-range-wrap">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="filter__price">
+<!--         <div class="filter__price">
             <p>별점 :</p>
             <div class="price-range-wrap">
                 <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
@@ -139,10 +139,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         	 <div>
            		 <p style="display: inline;">커먼 마감시간 :</p>
 				<select name='endtime'>
+				  <option value=''>마감시간</option>
 				  <option value='1'>13시</option>
 				  <option value='2'>14시</option>
 				  <option value='3'>15시</option>
@@ -161,6 +162,7 @@
         	 <div>
            		 <p style="display: inline;">배달시간 :</p>           		 
 				<select name='shiptime'>
+				  <option value=''>배달시간</option>
 				  <option value='1'>13시</option>
 				  <option value='2'>14시</option>
 				  <option value='3'>15시</option>
@@ -463,7 +465,7 @@
                             <img src="img/listing/list_small_icon-3.png" alt="">
                             <span>Hotel</span>
                         </div>
-                        <div class="listing__item__text__info__right">Open Now</div>
+                    6    <div class="listing__item__text__info__right">Open Now</div>
                     </div>
                 </div>
             </div>
@@ -480,7 +482,7 @@
 		<script>
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 			    mapOption = { 
-			        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+			        center: new kakao.maps.LatLng(37.498911, 127.031900), // 지도의 중심좌표
 			        level: 3 // 지도의 확대 레벨
 			    };
 			
@@ -497,10 +499,10 @@
 			var zoomControl = new kakao.maps.ZoomControl();
 			map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 			
-			// 지도에 마커를 표시합니다 
+			// 지도에 마커를 표시합니다 37.498911, 127.031900
 			var marker = new kakao.maps.Marker({
 			    map: map, 
-			    position: new kakao.maps.LatLng(33.450701, 126.570667)
+			    position: new kakao.maps.LatLng(37.498911, 127.031900)
 			});
 
 			// 커스텀 오버레이에 표시할 컨텐츠 입니다
@@ -509,7 +511,7 @@
 			var content = '<div class="wrap">' + 
 			            '    <div class="info">' + 
 			            '        <div class="title">' + 
-			            '            카카오 스페이스닷원' + 
+			            '            아이티' + 
 			            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
 			            '        </div>' + 
 			            '        <div class="body">' + 
@@ -519,7 +521,7 @@
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' + 
 			            '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' + 
-			            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' + 
+			            '                <div><a href="https://itwill.co.kr" target="_blank" class="link">홈페이지</a></div>' + 
 			            '            </div>' + 
 			            '        </div>' + 
 			            '    </div>' +    
