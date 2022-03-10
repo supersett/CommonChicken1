@@ -91,6 +91,60 @@
         </div>
     </header>
     <!-- Header Section End -->
+    <section class="hero set-bg" style="padding: 100px 0; padding-bottom: 0px;"  data-setbg="img/logo11.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="hero__text"> -->
+                        <!-- <div class="section-title">
+                            <h2>함께하는 즐거움 "커먼치킨"</h2>
+                            <p>동네 친구들과 즐거움을 나누세요~! common comeon~</p>
+                        </div> -->
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <input type="text" id="myLocation" placeholder="Search...">
+                                <div class="select__option">
+                                    <select>
+                                        <option value="">출발시간</option>
+										  <option value='1'>13시</option>
+										  <option value='2'>14시</option>
+										  <option value='3'>15시</option>
+										  <option value='4'>16시</option>
+										  <option value='5'>17시</option>
+										  <option value='6'>18시</option>
+										  <option value='7'>19시</option>
+										  <option value='8'>20시</option>
+										  <option value='9'>22시</option>
+										  <option value='10'>22시</option>
+										  <option value='11'>23시</option>
+										  <option value='12'>24시</option>
+                                    </select>
+                                </div>
+<!--                                 <div class="select__option">
+                                    <select>
+                                        <option value="">위치 API</option>
+                                    </select>
+                                </div> -->
+                                <button onclick="findLocation()" type="button" style="width: 20%; background-color: #327258;">현재 위치</button>
+                                <button type="submit">Explore Now</button>
+                            </form>
+                        </div>
+                        <!-- <ul class="hero__categories__tags">
+                            <li><a href="#"><img src="img/hero/cat-1.png" alt=""> Restaurent</a></li>
+                            <li><a href="#"><img src="img/hero/cat-2.png" alt=""> Food & Drink</a></li>
+                            <li><a href="#"><img src="img/hero/cat-3.png" alt=""> Shopping</a></li>
+                            <li><a href="#"><img src="img/hero/cat-4.png" alt=""> Beauty</a></li>
+                            <li><a href="#"><img src="img/hero/cat-5.png" alt=""> Hotels</a></li>
+                            <li><a href="#"><img src="img/hero/cat-6.png" alt=""> All Categories</a></li>
+                        </ul> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <!-- Filter Begin -->
     <div class="filter nice-scroll">
@@ -180,13 +234,50 @@
             <br>
             <div>
             	<p>별점</p>
-            	<label><input type="checkbox" name="rate" value="5">⭐️⭐️⭐️⭐️⭐️</label><br>
-            	<label><input type="checkbox" name="rate" value="4">⭐️⭐️⭐️⭐️</label><br>
-            	<label><input type="checkbox" name="rate" value="3">⭐️⭐️⭐️</label><br>
-            	<label><input type="checkbox" name="rate" value="2">⭐️⭐️</label><br>
-            	<label><input type="checkbox" name="rate" value="1">️⭐️</label>
+            	<label><input type="checkbox" name="five" value="5">⭐️⭐️⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="four" value="4">⭐️⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="three" value="3">⭐️⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="two" value="2">⭐️⭐️</label><br>
+            	<label><input type="checkbox" name="one" value="1">️⭐️</label>
             </div>
-<!--         
+<!--         <div class="filter__tags">
+            <h6>Tag</h6>
+            <label for="coupon">
+                Coupons
+                <input type="checkbox" id="coupon">
+                <span class="checkmark"></span>
+            </label>
+            <label for="sa">
+                Smoking Allowed
+                <input type="checkbox" id="sa">
+                <span class="checkmark"></span>
+            </label>
+            <label for="camping">
+                Camping
+                <input type="checkbox" id="camping">
+                <span class="checkmark"></span>
+            </label>
+            <label for="hot-spots">
+                Hot Spots
+                <input type="checkbox" id="hot-spots">
+                <span class="checkmark"></span>
+            </label>
+            <label for="internet">
+                Internet
+                <input type="checkbox" id="internet">
+                <span class="checkmark"></span>
+            </label>
+            <label for="tr">
+                Top Rated
+                <input type="checkbox" id="tr">
+                <span class="checkmark"></span>
+            </label>
+            <label for="hd">
+                Hot Deal
+                <input type="checkbox" id="hd">
+                <span class="checkmark"></span>
+            </label>
+        </div> -->
         <br><br>
         
         <div class="filter__btns">
@@ -197,7 +288,7 @@
     <!-- Filter End -->
 
     <!-- Listing Section Begin -->
-    <section class="listing nice-scroll">
+    <section class="listing nice-scroll" style="padding-top: 20px;">
         <div class="listing__text__top">
             <div class="listing__text__top__left">
                 <h5>Restaurants</h5>
@@ -437,7 +528,7 @@
     <!-- Listing Section End -->
 
     <!-- Map Begin -->
-    <div class="listing__map">
+    <div class="listing__map" style="margin-top: 0px;">
 		<div id="map" style="width:100%;height:100%;"></div>
 		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3f2400bbaac1b16c5e6592a750160c2d"></script>
 		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
