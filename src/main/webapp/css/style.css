@@ -1780,7 +1780,12 @@ ol {
 
 .listing__details__rating__overall {
 	text-align: center;
-	float: left;
+	/*float: left;*/
+	margin-right: 75px;
+}
+
+.listing__details__rating__overall fixx {
+	text-align: center;
 	margin-right: 75px;
 }
 

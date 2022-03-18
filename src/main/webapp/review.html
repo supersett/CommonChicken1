@@ -111,7 +111,7 @@
                     <div class="listing__item__pic__tag">Popular</div>
                     <div class="listing__item__pic__btns">
                         <a href="#"><span class="icon_zoom-in_alt"></span></a>
-                        <a href="#"><span class="icon_heart_alt"></span></a>
+                        <a onclick="viewReview()"><span class="icon_heart_alt"></span></a>
                     </div>
                 </div>
                 <div class="listing__item__text">
@@ -141,7 +141,31 @@
                         <div class="listing__item__text__info__right">Open Now</div>
                     </div>
                 </div>
+                <div class="listing__item__text" id="review_reply" style="display:none;">
+                    <div class="listing__item__text__inside">
+                        <h5>Chinese Sausage Restaurant</h5>
+                        <ul>
+                            <li><span class="icon_pin_alt"></span> 236 Littleton St. New Philadelphia, Ohio, United
+                                States</li>
+                            <li><span class="icon_phone"></span> (+12) 345-678-910</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
+   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div class="listing__item" style="width: 340px; margin-right:20px;">
                 <div class="listing__item__pic set-bg" data-setbg="img/listing/list-2.jpg">
                     <img src="img/listing/list_icon-2.png" alt="">
@@ -343,6 +367,24 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+             <script type="text/javascript">
+	    function viewReview() {
+	    	
+	    	$('#review_reply').show();
+		    //document.getElementById('store_menu').className = 'nav-link active'
+		    //document.getElementById('store_review').className = 'nav-link'
+		    //document.getElementById('store_information').className = 'nav-link'
+	    };	
+	    /*
+	    function setDisplay() {
+	        if($('input:radio[id=paypal]').is(':checked')){
+	            $('#account_view').show();
+	        }else{
+	            $('#account_view').hide();
+	        }
+	    };
+	    */
+    </script>
 </body>
 
 </html>
