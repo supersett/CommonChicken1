@@ -105,88 +105,68 @@
             <div class="container">
                 <div class="py-5 text-center">
                     <i class="fa fa-credit-card fa-3x text-primary"></i>
-                    <h2 class="my-3">주&nbsp;&nbsp;문</h2>
+                    <h2 class="my-3">주&nbsp;문&nbsp;완&nbsp;료</h2>
                 </div>
-                <div class="row py-5">
-                    <div class="col-md-4 order-md-2 mb-4">
-                        <h4 class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-muted">상품 정보</span>
-                            <span class="badge badge-secondary badge-pill">3</span>
-                        </h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">양념치킨</h6>
-                                    <small class="text-muted">Brief description</small>
-                                </div>
-                                <span class="text-muted">1</span>
-                                <span class="text-muted">18,000원</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">후라이드치킨</h6>
-                                    <small class="text-muted">Brief description</small>
-                                </div>
-                                <span class="text-muted">3</span>
-                                <span class="text-muted">16,000원</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">콜라</h6>
-                                    <small class="text-muted">Brief description</small>
-                                </div>
-                                <span class="text-muted">2</span>
-                                <span class="text-muted">2,500원</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span>합계</span>
-                                <strong>36,500원</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-8 order-md-1">
-                            <div class="col-md-6 mb-3">
-                              <div class="row">
-                                <div class="col-6 custom-control custom-radio">
-                                    <input id="orgaddr" name="addrMethod" type="radio" checked class="custom-control-input" onchange="" required>
-                                    <label class="custom-control-label" for="orgaddr">회원정보와 동일</label>
-                                </div>
-                                <div class="col-6 custom-control custom-radio">
-                                    <input id="newaddr" name="addrMethod" type="radio" class="custom-control-input" onchange="" required>
-                                    <label class="custom-control-label" for="newaddr">새로운 배송지</label>
-                                </div>
-                              </div>
-                            </div>
-                        <h4 class="mb-3">배송지 정보</h4>
+                <div class="row">
+                    <div class="col-md align-self-center" style="margin-right:0px;" >
+                        <h4 class="mb-3">주문이 완료 되었습니다. </h4>
                         <form class="needs-validation" novalidate>
                             <div class="mb-3">
-                                <label for="username">받는 사람</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        이름
-                                    </div>
+                                <label for="username">주문내역</label>
+			                      <div class="col-md-4 order-md-2 mb-4">
+			                        <ul class="list-group mb-3">
+			                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+			                                <div>
+			                                    <h6 class="my-0">양념치킨</h6>
+			                                    <small class="text-muted">Brief description</small>
+			                                </div>
+			                                <span class="text-muted">1</span>
+			                                <span class="text-muted">18,000원</span>
+			                            </li>
+			                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+			                                <div>
+			                                    <h6 class="my-0">후라이드치킨</h6>
+			                                    <small class="text-muted">Brief description</small>
+			                                </div>
+			                                <span class="text-muted">3</span>
+			                                <span class="text-muted">16,000원</span>
+			                            </li>
+			                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+			                                <div>
+			                                    <h6 class="my-0">콜라</h6>
+			                                    <small class="text-muted">Brief description</small>
+			                                </div>
+			                                <span class="text-muted">2</span>
+			                                <span class="text-muted">2,500원</span>
+			                            </li>
+			                            <li class="list-group-item d-flex justify-content-between">
+			                                <span>합계</span>
+			                                <strong>36,500원</strong>
+			                            </li>
+			                        </ul>
+			                    </div>
+                                <label for="username">이름</label>
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <input type="text" class="form-control-plaintext" id="username" placeholder="이름" required readonly>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="address">주소</label>
                                 <div class="row">
 	                                <div class="col-md-4 mb-1">
-		                                <input class="form-control" type="text" id="sample4_postcode" placeholder="우편번호">
-		                            </div><div class="col-md-3 mb-3">    
-										<input class="btn btn-primary btn-md btn-block" type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-									</div>	
+		                                <input class="form-control-plaintext" type="text" id="sample4_postcode" placeholder="우편번호"readonly>
+		                            </div>
 								</div>
                                 <div class="row">
                                 	<div class="col-md-6 mb-1">                                
-									<input class="form-control" type="text" id="sample4_roadAddress" placeholder="도로명주소">
+									<input class="form-control-plaintext" type="text" id="sample4_roadAddress" placeholder="도로명주소" readonly>
 									</div>
                                 	<div class="col-md-6 mb-1">
-									<input class="form-control" type="text" id="sample4_jibunAddress" placeholder="지번주소">
+									<input class="form-control-plaintext" type="text" id="sample4_jibunAddress" placeholder="지번주소" readonly>
 									</div>                                	
 									<div class="col-md-4 mb-3">
 									<span id="guide" style="color:#999;display:none"></span>
-									<input class="form-control" type="text" id="sample4_detailAddress" placeholder="상세주소">
+									<input class="form-control-plaintext" type="text" id="sample4_detailAddress" placeholder="상세주소" readonly>
 									</div>                                	
 								</div>
 							</div>
@@ -206,23 +186,23 @@
                             <div class="mb-3">
                                 <label for="mobile">휴대전화</label>
 	                            <div class="row">
-	                                <div class="col-md-4 mb-3">
-	                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-	                                </div>
-	                                <div class="col-md-4 mb-3">
-	                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-	                                </div>
-	                                <div class="col-md-4 mb-3">
-	                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+	                                <div class="col-md-1 mb-3">
+	                                    <input type="text" class="form-control-plaintext" id="firstName" placeholder="" value="" required readonly>
+	                                </div>-
+	                                <div class="col-md-1 mb-3">
+	                                    <input type="text" class="form-control-plaintext" id="lastName" placeholder="" value="" required readonly>
+	                                </div>-
+	                                <div class="col-md-1 mb-3">
+	                                    <input type="text" class="form-control-plaintext" id="lastName" placeholder="" value="" required readonly>
 	                                </div>
 	                            </div>
 							</div>	
 
-                            <div class="mb-3">
+                            <div class="">
                                 <label for="email">이메일
                                     <span class="text-muted">(Optional)</span>
                                 </label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <input type="email" class="form-control-plaintext" id="email" placeholder="you@example.com" readonly>
                                 <div class="invalid-feedback">
                                     Please enter a valid email address for shipping updates.
                                 </div>
@@ -232,12 +212,7 @@
                             <div class="row">
                                 <div class="col-md-5 mb-3">
                                     <label for="country">요청사항</label>
-                                    <select class="w-100" id="country" required>
-                                        <option value="">Choose...</option>
-                                        <option>현관문 앞에 두고 가라</option>
-                                        <option>1층 앞에 두고 가라</option>
-                                        <option>경비실에 두고 가라</option>
-                                    </select>
+                                    <input type="email" class="form-control-plaintext" id="requestMessage" placeholder="현관문 앞에 두고 가라" readonly>
                                 </div>
                             </div>
                             <hr class="mb-4">
@@ -245,11 +220,11 @@
 
                             <div class="col-md-6 mb-3">
                               <div class="row">
-                                <div class="col-4 custom-control custom-radio">
+                                <div class="col-6 custom-control custom-radio">
                                     <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" onchange="setDisplay()" required>
                                     <label class="custom-control-label" for="credit">신용카드</label>
                                 </div>
-                                <div class="col-4 custom-control custom-radio">
+                                <div class="col-6 custom-control custom-radio">
                                     <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" onchange="setDisplay()" required>
                                     <label class="custom-control-label" for="paypal">무통장입금</label>
                                 </div>
@@ -266,35 +241,53 @@
                                 </div>
                             </div>
                             <hr class="mb-4">
-                            <h4 class="mb-3">약관동의</h4>
-	                              	<textarea class="form-control" readonly style="resize: none; height: 200px">
-	                              	개인정보 수집 및 이용 동의
-1. 수집하는 개인정보의 항목
-①이용 시 수집하는 개인정보의 범위
-가. 배달 정보: 휴대폰번호, 배달주소
-나. 결제 정보: [결제대행업체(PG사)로부터 제공받는 정보] 결제 처리 결과, 부분 마스킹 처리된 카드/계좌번호, 카드사, 은행명
-다. 자동 생성 정보: 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 주소, 기기정보(모델명, OS 버전, 기기고유번호), 광고ID
-2. 이용목적
-①회사는 다음과 같은 목적을 위하여 개인정보를 수집하고 있으며 목적이 변경될 경우에는 사전에 이용자의 동의를 구하도록 하겠습니다.
-가. 배달 정보: 이용자의 음식 주문에 따른 배달 진행, 맛집배달대행 서비스 이용 및 경품 배송을 위한 정확한 배송지의 확보 및 본인 식별
-나. 결제 정보: 결제 처리 결과 확인
-다. 자동 생성 정보: 서비스 부정이용 방지, 맞춤형 서비스 제공, 온라인 맞춤형 광고(브라우저 설정을 통해 거부가 가능하며, 자세한 내용은 개인정보 처리방침 참조)
-3. 수집하는 개인정보의 보유 및 이용기간
-①고객님의 개인정보는 서비스를 제공하는 기간 동안 보유 및 이용하며, 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 다만, 관계법령의 규정 및 내부지침에 의하여 고객님의 개인정보를 보관할 필요성이 있는 경우에는 고객님의 개인정보를 보관할 수 있습니다. 세부 내용은 요기요 개인정보처리방침을 참고해주시기 바랍니다.
-4. 동의 거부 권리 및 거부 시 불이익
-①고객님은 개인정보 수집 및 이용에 동의하지 않을 권리가 있습니다. 다만, 서비스에 필수적인 동의이므로 거부 할 경우 서비스 이용이 불가합니다.
-</textarea>
-                            <div class="col-md-6 mb-3">
-	                            <div class="custom-control custom-checkbox">
-	                                <input type="checkbox" class="custom-control-input" id="same-address">
-	                                <label class="custom-control-label" for="same-address">모든 약관 동의</label>
-	                            </div>
+                            
+                            <div class="row justify-content-around">
+	                            <button class="btn btn-primary" type="submit">홈으로</button>
+	                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">커먼 게시판 글 등록</button>
                             </div>
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">결제하기</button>
+                            
+							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title">커먼 게시판 글 등록</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true">&times;</span>
+							        </button>
+							      </div>
+							      <div class="modal-body">
+							        <p>커먼 게시판에 현재 커먼상품으로 모집요청글을 남기시겠습니까?</p>
+							      </div>
+							      <div class="invalid-feedback">
+							        이미 모집요청글이 등록되어 있습니다.
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-primary">예</button>
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+                            <!--  
+                            <div class="form-group">
+							    <div class="form-check">
+							      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+							      <label class="form-check-label" for="invalidCheck3">
+							        Agree to terms and conditions
+							      </label>
+							      <div class="invalid-feedback">
+							        You must agree before submitting.
+							      </div>
+							    </div>
+							  </div>
+                            -->
+                            
+                            
                         </form>
                     </div>
+                   </div>
                 </div>
-            </div>
             
             <!--  <a href="#" class="btn btn-primary scrollUp">
                 <i class="fa fa-arrow-circle-o-up"></i>
