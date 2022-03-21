@@ -17,12 +17,15 @@
 <!-- Bootstrap core CSS -->
 <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+<link rel="stylesheet" href="assets/css/select2.css" />
 <!-- Custom styles for this template -->
 <link href="assets/css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="assets/css/ace.css"
+	class="ace-main-stylesheet" id="main-ace-style" />
 <!-- styles needed for carousel slider -->
 <link href="assets/css/owl.carousel.css" rel="stylesheet">
 <link href="assets/css/owl.theme.css" rel="stylesheet">
+<script src="assets/js/ace-extra.js"></script>
 
 <!-- Just for debugging purposes. -->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -138,7 +141,7 @@
 											<ul class="acc-list">
 												<li><a href="account-myboard.html"><i
 														class="icon-docs"></i> 공동주문 모집,리뷰 </a></li>
-												
+
 											</ul>
 										</div>
 									</div>
@@ -179,32 +182,43 @@
 					</div>
 					<!--/.page-sidebar-->
 
-					<div class="col-sm-9 page-content">
-						<div class="inner-box">
+
+
+					<div class="col-sm-9 page-content" class="widget-body">
+						<div class="inner-box" class="widget-main">
 							<h2 class="title-2">
 								<i class="icon-docs"></i> 주문 현황
 							</h2>
-							<div>
+
+							<div id="fuelux-wizard-container">
 								<!-- #section:plugins/fuelux.wizard.steps -->
 								<ul class="steps">
 									<li data-step="1" class="active"><span class="step">1</span>
-										<span class="title">Validation states</span></li>
+										<span class="title">입금대기</span></li>
 
 									<li data-step="2"><span class="step">2</span> <span
-										class="title">Alerts</span></li>
+										class="title">주문접수</span></li>
 
 									<li data-step="3"><span class="step">3</span> <span
-										class="title">Payment Info</span></li>
+										class="title">커먼완료</span></li>
 
 									<li data-step="4"><span class="step">4</span> <span
-										class="title">Other Info</span></li>
+										class="title">배달시작</span></li>
+									<li data-step="4"><span class="step">5</span> <span
+										class="title">배달완료</span></li>
+									<li data-step="4"><span class="step">6</span> <span
+										class="title">커먼실패</span></li>
+									<li data-step="4"><span class="step">7</span> <span
+										class="title">주문취소</span></li>
+									
 								</ul>
 
 								<!-- /section:plugins/fuelux.wizard.steps -->
 							</div>
+
 							<div class="table-responsive">
 								<div class="table-action">
-									
+
 									<hr>
 									<!--  
 									<div class="table-search pull-right col-xs-7">
@@ -223,52 +237,48 @@
 									data-filter="#filter" data-filter-text-only="true">
 									<thead>
 										<tr>
-											<th style="width: 20%">주문번호</th>
+											<th style="width: 10%">주문번호</th>
 											<th style="width: 20%">점포명</th>
 											<th style="width: 20%">결제금액</th>
 											<th style="width: 20%">요청사항</th>
-											<th style="width: 20%">주문상세</th>
+											<th >주문상세</th>
+											<th style="width: 10%">리뷰쓰기</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td  class="add-img-selector"><div
-													class="checkbox">
+											<td class="add-img-selector"><div class="checkbox">
 													<label> <input type="checkbox">
 													</label>
 												</div></td>
-											<td  class="add-img-td"></td>
-											<td  class="ads-details-td"><div>
+											<td class="add-img-td"></td>
+											<td class="ads-details-td"><div>
 													<p>
 														<strong> <a href="ads-details.html"
-															title="Brend New Nexus 4">Brend New Nexus 4</a>
+															title="Brend New Nexus 4">30,000원</a>
 														</strong>
 													</p>
+
+												</div></td>
+											<td class="price-td"><div>
+													<strong> 빨리와주세요</strong>
+												</div></td>
+											<td class="action-td"><div>
+													교촌치킨순살 1개
 													
 												</div></td>
-											<td  class="price-td"><div>
-													<strong> $199</strong>
-												</div></td>
-											<td  class="action-td"><div>
+											<td class="action-td"><div>
 													<p>
 														<a class="btn btn-primary btn-xs"> <i
-															class="fa fa-edit"></i> Edit
+															class="fa fa-edit"></i> 리뷰작성
 														</a>
 													</p>
-													<p>
-														<a class="btn btn-info btn-xs"> <i
-															class="fa fa-mail-forward"></i> Share
-														</a>
-													</p>
-													<p>
-														<a class="btn btn-danger btn-xs"> <i
-															class=" fa fa-trash"></i> Delete
-														</a>
-													</p>
-												</div></td>
+													
+												</div></td>	
+												
 										</tr>
-										
-										
+
+
 									</tbody>
 								</table>
 							</div>
