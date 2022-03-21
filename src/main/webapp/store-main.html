@@ -159,7 +159,7 @@
                                    
                                     <div class="row">
 	                                    <div class="col-xs-6 text-left">
-		                                    <a href="#"><FONT size="4px" color="black"><strong>후라이드+양념 반반</strong></FONT></a>
+		                                    <a href="javascript:prdmenu();"><FONT size="4px" color="black"><strong>후라이드+양념 반반</strong></FONT></a>
 		                                    <br>
 		                                    <ul class="blog__item__widget">
 		                                        <li><i class="fa fa-money"></i>25,500원</li>
@@ -219,7 +219,7 @@
                                     </ul>
                                     <div class="row">
 	                                    <div class="col-xs-6 text-left">
-		                                    <a href="#"><FONT size="4px" color="black"><strong>후라이드+양념 반반</strong></FONT></a>
+		                                    <a href="'javascript:prdmenu();'"><FONT size="4px" color="black"><strong>후라이드+양념 반반</strong></FONT></a>
 		                                    <br>
 		                                    <ul class="blog__item__widget">
 		                                        <li><i class="fa fa-money"></i>25,500원</li>
@@ -440,47 +440,64 @@
 									  </div>
 									  <div class="cart">
 									    <ul class="list-group">
+									     
 									      <li class="list-group-item clearfix ng-scope" ng-repeat="item in cart.get().items" on-finish-render="scrollCartArea()">
 								          	<div class="menu-name ng-binding" ng-bind-html="cart.get_menu_name(item)|strip_html">후라이드</div>
 									        <div class="row">
 									            <div class="col-xs-6 pull-left">
-									              <a class="btn btn-del-menu" ng-click="cart.remove_item(item)" ng-hide="item.ms_type == 'disposable'">삭제</a>
-									              <span class="order-price ng-binding" ng-bind="(item.price * item.amount)|krw">74,000원</span>
+									              <button class="btn btn-del-menu">삭제</button>
+									              <span class="order-price ng-binding"><input type="hidden" id="order-price" value="74000" style="border:0 solid black">74,000원</span>
 									           	</div>
 									           	<div class="col-xs-6 text-right">
-									              <a class="btn btn-minus" ng-click="cart.set_quantity(item, -1)"></a>
-									              <span class="order-num ng-binding" name="num" ng-bind="item.amount">2</span>
-									              <a class="btn btn-plus" ng-click="cart.set_quantity(item, 1)"></a>
+									              <button class="btn btn-minus"></button>
+									              <input class="order-num ng-binding" value="2" style="width:20px; border:0px" type="text" name="ct_qty" id="ct_qty" readonly="readonly"/>
+									              <button class="btn btn-plus"></button>
 									            </div>
 									        </div>
-									      </li><!-- end ngRepeat: item in cart.get().items --><li class="list-group-item clearfix ng-scope" ng-repeat="item in cart.get().items" on-finish-render="scrollCartArea()">
+									      </li>
+									      
+									      
+									      
+									      
+									      
+									      
+									      
+									      
+									      <li class="list-group-item clearfix ng-scope" ng-repeat="item in cart.get().items" on-finish-render="scrollCartArea()">
 									        <div class="menu-name ng-binding" ng-bind-html="cart.get_menu_name(item)|strip_html">보족원쌈: 2인（생육 290g, 수육 200g）</div>
 									        <div class="row">
 									            <div class="col-xs-6 pull-left">
 									              <a class="btn btn-del-menu" ng-click="cart.remove_item(item)" ng-hide="item.ms_type == 'disposable'">삭제</a>
-									              <span class="order-price ng-binding" ng-bind="(item.price * item.amount)|krw">90,000원</span>
+									              <span class="order-price ng-binding"><input type="hidden" id="order-price" value="90000" style="border:0 solid black">90,000원</span>
 									            </div>
-									            <div class="col-xs-6 text-right" ng-hide="item.ms_type == 'disposable'">
-									              <a class="btn btn-minus" ng-click="cart.set_quantity(item, -1)"></a>
-									              <span class="order-num ng-binding" name="num" ng-bind="item.amount">2</span>
-									              <a class="btn btn-plus" ng-click="cart.set_quantity(item, 1)"></a>
+									           	<div class="col-xs-6 text-right">
+									              <button class="btn btn-minus"></button>
+									              <input class="order-num ng-binding" value="1" style="width:20px; border:0px" type="text" name="ct_qty" id="ct_qty" readonly="readonly"/>
+									              <button class="btn btn-plus"></button>
 									            </div>
 									        </div>
-									      </li><!-- end ngRepeat: item in cart.get().items --><li class="list-group-item clearfix ng-scope" ng-repeat="item in cart.get().items" on-finish-render="scrollCartArea()">
+									      </li><li class="list-group-item clearfix ng-scope" ng-repeat="item in cart.get().items" on-finish-render="scrollCartArea()">
 									          <div class="menu-name ng-binding" ng-bind-html="cart.get_menu_name(item)|strip_html">의성마늘떡맵쌈: 소（생육 500g, 수육 350g）</div>
 									        <div class="row">
 									            <div class="col-xs-6 pull-left">
 									              <a class="btn btn-del-menu" ng-click="cart.remove_item(item)" ng-hide="item.ms_type == 'disposable'">삭제</a>
-									              <span class="order-price ng-binding" ng-bind="(item.price * item.amount)|krw">38,000원</span>
+									              <span class="order-price ng-binding"><input type="hidden" id="order-price" value="38000" style="border:0 solid black">38,000원</span>
 									            </div>
-									            <div class="col-xs-6 text-right" ng-hide="item.ms_type == 'disposable'">
-									              <a class="btn btn-minus" ng-click="cart.set_quantity(item, -1)"></a>
-									              <span class="order-num ng-binding" name="num" ng-bind="item.amount">1</span>
-									              <a class="btn btn-plus" ng-click="cart.set_quantity(item, 1)"></a>
+									           	<div class="col-xs-6 text-right">
+									              <button class="btn btn-minus"></button>
+									              <input class="order-num ng-binding" value="1" style="width:20px; border:0px" type="text" name="ct_qty" id="ct_qty" readonly="readonly"/>
+									              <button class="btn btn-plus"></button>
 									            </div>
 									        </div>
-									      </li><!-- end ngRepeat: item in cart.get().items -->
+									      </li>
+									       
 									    </ul>
+										<ul>
+									      <li class="list-group-item d-flex justify-content-between">
+				                                <span class="menu-name ng-binding">합계</span>
+				                                <strong class="order-price ng-binding"><input type="text" id="order-total" value="" style="border:0 solid black"></strong>
+				                          </li>
+				                        </ul>  
 										<!-- 
 									    <div ng-show="cart.is_empty()" class="cart-empty ng-hide">
 									        주문표에 담긴 메뉴가 없습니다.
@@ -613,7 +630,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    
+        
     <script type="text/javascript">
 	    function viewMenu() {
 		    $('#menu').show();
@@ -639,6 +656,127 @@
 	        document.getElementById('store_review').className = 'nav-link'
 	        document.getElementById('store_information').className = 'nav-link active'
 	    };	
+	    
+	    /*function change_qty2(t){ 
+	    	//var min_qty = '수량버튼'*1; 
+	    	var min_qty = 1; 
+	    	var max_qty = '200'; 
+	    	var this_qty = parseInt($(this).siblings('#ct_qty').val())*1;;
+	    	if(t=="m"){ 
+	    		this_qty -= 1; 
+	    		
+	    		if(this_qty<min_qty){ 
+	    		
+		    		alert("수량은 1개 이상 입력해 주십시오."); 
+		    		return; 
+	    		} 
+	    		
+	    	} else if(t=="p") { 
+	    		this_qty += 1; 
+	    		
+	    		if(this_qty>max_qty){ 
+	    			alert("죄송합니다. 재고가 부족합니다.");
+	    			return; 
+    			} 
+    		}
+    		$("#ct_qty").val(this_qty);
+	    };*/
+	   	/*
+	    function prdmenu1() {
+	    $(".list-group").append(
+	    		"<li class='list-group-item clearfix ng-scope'>"+
+	          	"<div class='menu-name ng-binding'>후라이드</div>"+
+	          	"<div class='row'>"+
+		            "<div class='col-xs-6 pull-left'>"+
+		              "<button class='btn btn-del-menu'>삭제</button>"+
+		              "<span class='order-price ng-binding'>74,000원</span>"+
+		           	"</div>"+
+		           	"<div class='col-xs-6 text-right'>"+
+		              "<button class='btn btn-minus'></button>"+
+		              "<input class='order-num ng-binding' value='1' style='width:20px; border:0px' type='text' name='ct_qty' id='ct_qty' readonly='readonly'/>"+
+		              "<button class='btn btn-plus'></button>"+
+		            "</div>"+
+		        "</div>"+
+		      "</li>"+
+		        "<script type='text/javascript'>"+
+		        "$('.btn-plus').on('click', function(){var quantity = $(this).parent('div').find('input').val();"+
+			    	"$(this).parent('div').find('input').val(++quantity);});"+
+			    "$('.btn-minus').on('click', function(){var quantity = $(this).parent('div').find('input').val();"+
+			    	"if(quantity > 1){$(this).parent('div').find('input').val(--quantity);}});"+
+			    "$('.btn-del-menu').on('click', function(){$(this).parent().parent().parent('li').remove();});"
+	    )};
+	    */    
+	    function prdmenu() {
+		    $(".list-group").append(
+		    		"<li class='list-group-item clearfix ng-scope'>"+
+		          	"<div class='menu-name ng-binding'>후라이드</div>"+
+		          	"<div class='row'>"+
+			            "<div class='col-xs-6 pull-left'>"+
+			              "<button class='btn btn-del-menu'>삭제</button>"+
+			              "<span class='order-price ng-binding'><input type='hidden' id='order-price' value='74000' style='border:0 solid black'>74,000원</span>"+
+			           	"</div>"+
+			           	"<div class='col-xs-6 text-right'>"+
+			              "<button class='btn btn-minus'></button>"+
+			              "<input class='order-num ng-binding' value='1' style='width:20px; border:0px' type='text' name='ct_qty' id='ct_qty' readonly='readonly'/>"+
+			              "<button class='btn btn-plus'></button>"+
+			            "</div>"+
+			        "</div>"+
+			      "</li>"
+		    )
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    };
+		    
+	    $(document).on('click','.btn-plus', function(){
+	    	var quantity = $(this).parent('div').find('input').val();
+	    	$(this).parent("div").find("input").val(++quantity);
+	    	
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    });
+	    
+	    $(document).on('click','.btn-minus', function(){
+	    	var quantity = $(this).parent('div').find('input').val();
+	    	if(quantity > 1){
+	    		$(this).parent('div').find('input').val(--quantity);		
+	    	}
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    });
+	    $(document).on('click','.btn-del-menu', function(){
+	    	$(this).parent().parent().parent('li').remove();
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    });
+	    
+	    $(document).ready(function totalprice() {
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    });
+	    /*
+	    function totalprice() {
+	    	var sum = 0;
+	    	$("input#order-price").each(function(){
+	    		sum += (parseInt($(this).val()))*(parseInt($(this).parent().parent().next().find("input").val()));
+	    	});
+	    	$('input[id=order-total]').val(sum+'원');
+	    };
+	    */
     </script>
 </body>
 
